@@ -58,6 +58,22 @@
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       }
       .feature:nth-of-type(even) { background: #f1f1f1; }
+      .pricing {
+        margin-top: 40px;
+      }
+      .pricing h3 {
+        margin-top: 30px;
+        font-size: 1.4rem;
+        color: #111;
+      }
+      .pricing ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 10px 0 30px;
+      }
+      .pricing li {
+        margin: 5px 0;
+      }
     </style>
   </head>
   <body>
@@ -70,6 +86,9 @@
       </div>
 
       <div id="club" class="section">
+        <h2>📤 Weekly Player Stats Sender</h2>
+        <div class="feature">Automatically generate and send weekly results for each player. Club owners can personalize and share net win/loss stats, withdrawals, and top performer alerts via Telegram or copy/paste messages.</div>
+
         <h2>🧾 Club Ledger</h2>
         <div class="feature">Track player balances, payouts, and daily profit/loss in one clean Google Sheet.</div>
 
@@ -79,8 +98,32 @@
         <h2>🎒 Club Starter Kit</h2>
         <div class="feature">Templates, flyers, onboarding forms, and P&L tools to launch your club professionally.</div>
 
+        <div class="pricing">
+          <h2>💵 Pricing (One-Time)</h2>
+          <h3>✅ Starter – $49</h3>
+          <ul>
+            <li>Club Starter Kit</li>
+            <li>Basic P&L Tracker</li>
+            <li>Canva flyers + Onboarding form</li>
+          </ul>
+
+          <h3>✅ Pro – $99</h3>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>Advanced Club Ledger</li>
+            <li>Chip balance tracking + net P/L calculator</li>
+          </ul>
+
+          <h3>✅ Pro + Bot – $99 + $29/month</h3>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Telegram bot for engagement</li>
+            <li>Idle player reminders, top player alerts</li>
+          </ul>
+        </div>
+
         <h2>Contact</h2>
-        <p>Message us on Telegram: <strong>@redlinepoker</strong></p>
+        <p>Message us on Telegram: <strong>@SettleUpHQ</strong></p>
       </div>
 
       <div id="union" class="section">
@@ -93,15 +136,39 @@
         <h2>📈 Cross-Settlement Engine</h2>
         <div class="feature">Minimize the number of payouts between clubs using smart balance logic.</div>
 
+        <div class="pricing">
+          <h2>💵 Pricing</h2>
+          <h3>✅ Starter – $199</h3>
+          <ul>
+            <li>Settlement Sheet + Payout Templates</li>
+            <li>Manual messaging framework</li>
+          </ul>
+
+          <h3>✅ Pro Tools – $349</h3>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>Union Fee Tracker</li>
+            <li>Cross-Settlement calculator</li>
+          </ul>
+
+          <h3>✅ Pro + Bot – $349 + $49/month</h3>
+          <ul>
+            <li>Everything in Pro Tools</li>
+            <li>Telegram bot for weekly DMs</li>
+            <li>Screenshot OCR, group reminders</li>
+          </ul>
+        </div>
+
         <h2>Contact</h2>
-        <p>Message us on Telegram: <strong>@redlinepoker</strong></p>
+        <p>Message us on Telegram: <strong>@SettleUpHQ</strong></p>
       </div>
     </div>
 
     <script>
       function showSection(role) {
         document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-        document.getElementById(role).classList.add('active');
+        const target = document.getElementById(role);
+        if (target) target.classList.add('active');
       }
     </script>
   </body>
