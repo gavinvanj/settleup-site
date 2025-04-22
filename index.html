@@ -1,8 +1,9 @@
-<!-- SettleUp Tools for ClubGG Owners and Union Owners -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>SettleUp Tools for ClubGG</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SettleUp Tools</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -14,7 +15,7 @@
       .container {
         max-width: 900px;
         margin: auto;
-        padding: 60px 20px;
+        padding: 80px 20px;
         text-align: center;
       }
       h1 {
@@ -22,37 +23,33 @@
         margin-bottom: 10px;
       }
       .tagline {
+        font-size: 1.25rem;
         color: #555;
-        margin-bottom: 40px;
-        font-size: 1.2rem;
+        margin-bottom: 50px;
       }
-      .role-selector {
+      .button-group {
         display: flex;
         justify-content: center;
-        gap: 30px;
+        gap: 40px;
         margin-bottom: 60px;
+        flex-wrap: wrap;
       }
-      .role-selector a {
-        padding: 14px 32px;
-        font-size: 1.1rem;
-        text-decoration: none;
-        border-radius: 10px;
-        font-weight: bold;
+      .role-button {
+        background: #e63946;
         color: #fff;
-        background: #E63946;
+        border: none;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
         transition: background 0.2s ease;
       }
-      .role-selector a:hover {
-        background: #c8323e;
+      .role-button:hover {
+        background: #d62e3f;
       }
-      section {
-        margin-top: 60px;
-        text-align: left;
-      }
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 15px;
-      }
+      .section { display: none; text-align: left; }
+      .section.active { display: block; }
       .feature {
         margin-bottom: 25px;
         padding: 20px;
@@ -60,96 +57,52 @@
         background: #ffffff;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       }
-      .feature:nth-of-type(even) {
-        background: #f1f1f1;
-      }
-      .pricing-table {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        text-align: center;
-        margin-top: 30px;
-      }
-      .plan {
-        background: #fff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .plan:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      }
-      .cta {
-        margin-top: 60px;
-        text-align: center;
-        font-size: 1.2rem;
-      }
+      .feature:nth-of-type(even) { background: #f1f1f1; }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>SettleUp Tools</h1>
       <p class="tagline">Choose your role to explore tools built just for you.</p>
-
-      <div class="role-selector">
-        <a href="#club">For Club Owners</a>
-        <a href="#union">For Union Owners</a>
+      <div class="button-group">
+        <button class="role-button" onclick="showSection('club')">For Club Owners</button>
+        <button class="role-button" onclick="showSection('union')">For Union Owners</button>
       </div>
 
-      <section id="club">
+      <div id="club" class="section">
         <h2>🧾 Club Ledger</h2>
-        <div class="feature">
-          Track player balances, payouts, and daily profit/loss in one clean Google Sheet. Easily log screenshots, withdrawals, and settle up with accuracy.
-        </div>
+        <div class="feature">Track player balances, payouts, and daily profit/loss in one clean Google Sheet.</div>
 
         <h2>🤖 Custom Player Bot</h2>
-        <div class="feature">
-          Telegram bot sends automatic reminders to idle players, promotes active tables, and tracks top players. Boosts engagement and chip flow with zero manual work.
-        </div>
+        <div class="feature">Telegram bot sends auto reminders to idle players and promotes active tables.</div>
 
         <h2>🎒 Club Starter Kit</h2>
-        <div class="feature">
-          Prebuilt templates, onboarding forms, P&L trackers, Canva flyers, and tips to run a pro-level ClubGG club — even if you're just starting out.
-        </div>
-      </section>
+        <div class="feature">Templates, flyers, onboarding forms, and P&L tools to launch your club professionally.</div>
 
-      <section>
-        <h2>💵 Pricing</h2>
-        <div class="pricing-table">
-          <div class="plan">
-            <h3>Starter</h3>
-            <p><strong>$49</strong> one-time</p>
-            <p>✅ Club Starter Kit</p>
-          </div>
-          <div class="plan">
-            <h3>Pro</h3>
-            <p><strong>$99/month</strong></p>
-            <p>✅ Club Ledger<br>✅ Telegram Bot</p>
-          </div>
-          <div class="plan">
-            <h3>Elite</h3>
-            <p><strong>$149/month</strong></p>
-            <p>✅ Everything in Pro<br>✅ Setup Help<br>✅ Priority Support</p>
-          </div>
-        </div>
-      </section>
-
-      <div class="cta">
-        <p><strong>🚀 Ready to upgrade your Club?</strong></p>
+        <h2>Contact</h2>
         <p>Message us on Telegram: <strong>@redlinepoker</strong></p>
       </div>
 
-      <section id="union">
-        <h2>📊 Union Tools (Coming Soon)</h2>
-        <div class="feature">
-          We’re building powerful tools for union owners too — automated settlements, rake tracking, player movement dashboards, and more.
-        </div>
-        <div class="feature">
-          Want early access? Message us to join the waitlist.
-        </div>
-      </section>
+      <div id="union" class="section">
+        <h2>📊 Settlement Bot</h2>
+        <div class="feature">Automate weekly balances and send club-specific payout messages.</div>
+
+        <h2>🧠 Union Fee Tracker</h2>
+        <div class="feature">Calculate fees per club and verify payments using screenshot OCR.</div>
+
+        <h2>📈 Cross-Settlement Engine</h2>
+        <div class="feature">Minimize the number of payouts between clubs using smart balance logic.</div>
+
+        <h2>Contact</h2>
+        <p>Message us on Telegram: <strong>@redlinepoker</strong></p>
+      </div>
     </div>
+
+    <script>
+      function showSection(role) {
+        document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+        document.getElementById(role).classList.add('active');
+      }
+    </script>
   </body>
 </html>
