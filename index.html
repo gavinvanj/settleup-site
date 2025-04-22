@@ -1,4 +1,4 @@
-<!-- SettleUp Tools for ClubGG Owners -->
+<!-- SettleUp Tools for ClubGG Owners and Union Owners -->
 <html>
   <head>
     <title>SettleUp Tools for ClubGG</title>
@@ -25,6 +25,25 @@
         color: #555;
         margin-bottom: 40px;
         font-size: 1.2rem;
+      }
+      .role-selector {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+      .role-selector a {
+        padding: 14px 32px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        color: #fff;
+        background: #E63946;
+        transition: background 0.2s ease;
+      }
+      .role-selector a:hover {
+        background: #c8323e;
       }
       section {
         margin-top: 60px;
@@ -71,24 +90,25 @@
   </head>
   <body>
     <div class="container">
-      <h1>SettleUp Tools for ClubGG</h1>
-      <p class="tagline">Everything a ClubGG owner needs to run smoother, retain more players, and scale fast.</p>
+      <h1>SettleUp Tools</h1>
+      <p class="tagline">Choose your role to explore tools built just for you.</p>
 
-      <section>
+      <div class="role-selector">
+        <a href="#club">For Club Owners</a>
+        <a href="#union">For Union Owners</a>
+      </div>
+
+      <section id="club">
         <h2>🧾 Club Ledger</h2>
         <div class="feature">
           Track player balances, payouts, and daily profit/loss in one clean Google Sheet. Easily log screenshots, withdrawals, and settle up with accuracy.
         </div>
-      </section>
 
-      <section>
         <h2>🤖 Custom Player Bot</h2>
         <div class="feature">
           Telegram bot sends automatic reminders to idle players, promotes active tables, and tracks top players. Boosts engagement and chip flow with zero manual work.
         </div>
-      </section>
 
-      <section>
         <h2>🎒 Club Starter Kit</h2>
         <div class="feature">
           Prebuilt templates, onboarding forms, P&L trackers, Canva flyers, and tips to run a pro-level ClubGG club — even if you're just starting out.
@@ -120,6 +140,16 @@
         <p><strong>🚀 Ready to upgrade your Club?</strong></p>
         <p>Message us on Telegram: <strong>@redlinepoker</strong></p>
       </div>
+
+      <section id="union">
+        <h2>📊 Union Tools (Coming Soon)</h2>
+        <div class="feature">
+          We’re building powerful tools for union owners too — automated settlements, rake tracking, player movement dashboards, and more.
+        </div>
+        <div class="feature">
+          Want early access? Message us to join the waitlist.
+        </div>
+      </section>
     </div>
   </body>
 </html>
